@@ -18,10 +18,16 @@ module "azurerm_resource_group" {
 module "azurerm_resource_group" {
 
     source = "../modules/azurerm_resource_group"
-    azurerm_resource_group_name = "infinite_rg5"
+    azurerm_resource_group_name = "infinite_rg4"
     azurerm_resource_group_location = "central india"
 }
 
+module "azurerm_resource_group" {
+
+    source = "../modules/azurerm_resource_group"
+    azurerm_resource_group_name = "infinite_rg5"
+    azurerm_resource_group_location = "central india"
+}
 
 module "azurerm_virtual_network" {
     depends_on = [ module.azurerm_resource_group ]
